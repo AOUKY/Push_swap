@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   work.c                                             :+:      :+:    :+:   */
+/*   setup.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 13:14:48 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 13:19:10 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/01 16:25:44 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,13 @@ void	set_price_of_push(t_stack *a, t_stack *b)
 			a->push_cost += a->target->index;
 		else
 			a->push_cost += len_b - (a->target->index);
+		if(a->above_med_line && a->target->above_med_line)
+		{
+			if(a->index < a->target->index)
+				a->push_cost = a->index + (a->target->index - a->index);
+			else
+				a->push_cost = a->target->index + (a->index - a->target->index);
+		}
 		a = a->next;
 	}
 }

@@ -6,27 +6,21 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:50:45 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 13:14:34 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/01 17:22:37 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	sort_stack(t_stack **a, t_stack **b)
 {
 	int	len_a;
 
 	len_a = ft_lstsize(*a);
-	if (len_a > 3 && !(is_sorted(*a)))
-	{
+	if (len_a-- > 3 && !(is_sorted(*a)))
 		push(a, b, 'b');
-		len_a--;
-	}
-	if (len_a > 3 && !(is_sorted(*a)))
-	{
+	if (len_a-- > 3 && !(is_sorted(*a)))
 		push(a, b, 'b');
-		len_a--;
-	}
 	while (len_a-- > 3 && !(is_sorted(*a)))
 	{
 		work_stack_a(*a, *b);
@@ -41,7 +35,6 @@ void	sort_stack(t_stack **a, t_stack **b)
 	set_index(*a);
 	make_min_top(a);
 }
-
 
 void	sort_three(t_stack **stack_a, char x)
 {

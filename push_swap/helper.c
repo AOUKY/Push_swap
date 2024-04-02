@@ -6,15 +6,15 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 13:21:08 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 13:22:28 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/02 12:10:27 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	make_min_top(t_stack **a)
 {
-	t_stack *min;
+	t_stack	*min;
 
 	min = min_nd(*a);
 	while ((*a) != min)
@@ -28,8 +28,8 @@ void	make_min_top(t_stack **a)
 
 t_stack	*min_nd(t_stack *nd)
 {
-	int min_nbr;
-	t_stack *minnd;
+	int		min_nbr;
+	t_stack	*minnd;
 
 	min_nbr = nd->nbr;
 	minnd = nd;
@@ -72,7 +72,7 @@ void	cheapset_move(t_stack *node)
 	cheap_value = LONG_MAX;
 	while (node)
 	{
-		if (node->push_cost < cheap_value)
+		if (node->push_cost <= cheap_value)
 		{
 			cheap_value = node->push_cost;
 			cheap_node = node;

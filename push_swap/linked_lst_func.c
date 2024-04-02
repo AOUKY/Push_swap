@@ -6,7 +6,7 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:21:06 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 12:24:32 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/02 12:40:52 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_stack	*new_node(long nbr)
 
 	if (nbr > INT_MAX || nbr < INT_MIN)
 	{
-		ft_printf("error max or min daz\n");
+		write(2, "Error\n", 6);
 		fr_lst(0, 0, 0);
 	}
 	new = malloc(sizeof(t_stack));
@@ -28,6 +28,7 @@ t_stack	*new_node(long nbr)
 	new->next = NULL;
 	return (new);
 }
+
 void	add_back(t_stack **stack, t_stack *new)
 {
 	t_stack	*stack_a;
@@ -48,7 +49,7 @@ void	add_back(t_stack **stack, t_stack *new)
 
 void	add_front(t_stack **stack, t_stack *new)
 {
-	t_stack *stack_a;
+	t_stack	*stack_a;
 
 	stack_a = *stack;
 	new->next = stack_a;

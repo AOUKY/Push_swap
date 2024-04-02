@@ -6,7 +6,7 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:34:38 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 12:47:55 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/02 12:42:17 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@ void	repetition_check(t_stack *stack)
 		{
 			if (lst->nbr == tmp->nbr)
 			{
-				ft_printf("Error\n");
+				write(2, "Error\n", 6);
 				fr_lst(0, 0, 0);
+				system("leaks push_swap");
 			}
 			tmp = tmp->next;
 		}

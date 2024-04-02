@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/01 17:17:58 by haouky            #+#    #+#             */
+/*   Updated: 2024/04/02 12:40:22 by haouky           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	cw(char const *s, char c)
@@ -70,7 +82,7 @@ char	**ft_split(char const *s, char c)
 	word = cw(s, c);
 	if (!word)
 	{
-		ft_printf("error\n");
+		write(2, "Error\n", 6);
 		fr_lst(0, 0, 0);
 	}
 	str = malloc((word + 1) * sizeof(char *));

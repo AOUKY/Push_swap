@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/01 12:07:51 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/02 13:29:01 by haouky           ###   ########.fr       */
+/*   Created: 2024/04/02 13:56:01 by haouky            #+#    #+#             */
+/*   Updated: 2024/04/02 14:09:06 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 static	void	full_stack(t_stack **stack_a, char **v)
 {
 	char	**p;
-	int		j;
+	int		j; 
 	int		i;
 
 	i = 1;
@@ -62,5 +62,5 @@ int	main(int c, char **v)
 	fr_lst(&stack_a, &stack_b, 1);
 	if (c < 2)
 		return (0);
-	se_main(&stack_a, &stack_b, v);;
-}
+	se_main(&stack_a, &stack_b, v);
+}                                   

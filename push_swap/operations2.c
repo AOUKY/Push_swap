@@ -6,11 +6,11 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:41:23 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 12:48:21 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/01 17:19:41 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	double_rotate_s(t_stack **a, t_stack **b)
 {

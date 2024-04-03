@@ -6,13 +6,13 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:07:51 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/03 11:50:33 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/03 12:34:40 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	void	full_stack(t_stack **stack_a, char **v)
+static void	full_stack(t_stack **stack_a, char **v)
 {
 	char	**p;
 	int		j;
@@ -35,7 +35,7 @@ static	void	full_stack(t_stack **stack_a, char **v)
 	}
 }
 
-static	void	se_main(t_stack **stack_a, t_stack **stack_b, char **v)
+static void	se_main(t_stack **stack_a, t_stack **stack_b, char **v)
 {
 	int	i;
 
@@ -62,5 +62,5 @@ int	main(int c, char **v)
 	fr_lst(&stack_a, &stack_b, 1);
 	if (c < 2)
 		return (0);
-	se_main(&stack_a, &stack_b, v);;
+	se_main(&stack_a, &stack_b, v);
 }

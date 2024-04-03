@@ -6,7 +6,7 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 15:39:56 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/03 11:21:18 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/03 12:34:01 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,24 @@ static int	cmp(char *s, char *p)
 	return (1);
 }
 
-static void drrr(t_stack **a, t_stack **b)
+static void	drrr(t_stack **a, t_stack **b)
 {
 	revers_rotate_s(a, 'x');
 	revers_rotate_s(b, 'x');
 }
-static void sss(t_stack **a, t_stack **b)
+
+static void	sss(t_stack **a, t_stack **b)
 {
 	swap(a, 'x');
 	swap(b, 'x');
 }
 
-static	void	rr(t_stack **a, t_stack **b)
+static void	rr(t_stack **a, t_stack **b)
 {
 	rotate_s(a, 'x');
 	rotate_s(b, 'x');
 }
+
 int	valid_move(t_stack **stack_a, t_stack **stack_b, char *line)
 {
 	if (cmp(line, "sa\n"))

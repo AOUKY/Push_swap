@@ -17,7 +17,7 @@ void	swap(t_stack **lst, char x)
 	t_stack	*node2;
 	t_stack	*node1;
 
-	if(!(*lst) || ft_lstsize(*lst) < 2)
+	if (!(*lst) || ft_lstsize(*lst) < 2)
 		return ;
 	node1 = *lst;
 	node2 = node1->next;
@@ -41,7 +41,7 @@ void	push(t_stack **src, t_stack **dst, char x)
 {
 	t_stack	*node;
 
-	if(!(*src))
+	if (!(*src))
 		return ;
 	node = (*src);
 	(*src) = node->next;
@@ -57,7 +57,7 @@ void	rotate_s(t_stack **lst, char x)
 {
 	t_stack	*node;
 
-	if(!(*lst) || ft_lstsize(*lst) < 2)
+	if (!(*lst) || ft_lstsize(*lst) < 2)
 		return ;
 	node = *lst;
 	*lst = (*lst)->next;
@@ -75,7 +75,7 @@ void	revers_rotate_s(t_stack **lst, char x)
 	t_stack	*before_last;
 	t_stack	*stack_a;
 
-	if(!(*lst) || ft_lstsize(*lst) < 2)
+	if (!(*lst) || ft_lstsize(*lst) < 2)
 		return ;
 	stack_a = *lst;
 	last_node = (ft_before_last(stack_a))->next;

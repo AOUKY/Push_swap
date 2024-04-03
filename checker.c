@@ -6,11 +6,11 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 15:28:57 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/03 11:50:08 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/03 12:24:15 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../Get_Next_Line/get_next_line.h"
+# include "Get_Next_Line/get_next_line.h"
 # include "push_swap.h"
 
 static void	full_stack(t_stack **stack_a, char **v)

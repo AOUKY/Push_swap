@@ -6,14 +6,14 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:04:08 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/03 10:34:12 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/03 12:23:35 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../ft_printf/ft_printf.h"
+# include "ft_printf/ft_printf.h"
 # include <limits.h>
 # include <stdbool.h>
 # include <stddef.h>

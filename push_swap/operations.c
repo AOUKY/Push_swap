@@ -6,7 +6,7 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:30:36 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 12:41:08 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/03 11:04:14 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	swap(t_stack **lst, char x)
 	t_stack	*node2;
 	t_stack	*node1;
 
+	if(!(*lst) || ft_lstsize(*lst) < 2)
+		return ;
 	node1 = *lst;
 	node2 = node1->next;
 	node1->next = node2->next;
@@ -39,6 +41,8 @@ void	push(t_stack **src, t_stack **dst, char x)
 {
 	t_stack	*node;
 
+	if(!(*src))
+		return ;
 	node = (*src);
 	(*src) = node->next;
 	node->next = 0;
@@ -53,6 +57,8 @@ void	rotate_s(t_stack **lst, char x)
 {
 	t_stack	*node;
 
+	if(!(*lst) || ft_lstsize(*lst) < 2)
+		return ;
 	node = *lst;
 	*lst = (*lst)->next;
 	node->next = 0;
@@ -69,6 +75,8 @@ void	revers_rotate_s(t_stack **lst, char x)
 	t_stack	*before_last;
 	t_stack	*stack_a;
 
+	if(!(*lst) || ft_lstsize(*lst) < 2)
+		return ;
 	stack_a = *lst;
 	last_node = (ft_before_last(stack_a))->next;
 	before_last = ft_before_last(stack_a);

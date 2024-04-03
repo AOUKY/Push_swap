@@ -6,13 +6,13 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:15:46 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/02 12:46:52 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/02 16:44:30 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlenn(const char *str)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-static char	*sub(char const *s, unsigned int st, size_t l)
+static char	*subs(char const *s, unsigned int st, size_t l)
 {
 	size_t	i;
 	char	*c;
@@ -51,7 +51,7 @@ char	*ft_substr(char const *s, unsigned int st, size_t l)
 
 	if (!s)
 		return (0);
-	if (ft_strlen(s) < st)
+	if (ft_strlenn(s) < st)
 	{
 		c = malloc(1);
 		if (c == 0)
@@ -59,7 +59,7 @@ char	*ft_substr(char const *s, unsigned int st, size_t l)
 		c[0] = '\0';
 		return (c);
 	}
-	return (sub(s, st, l));
+	return (subs(s, st, l));
 }
 
 long	ft_atoi(const char *s)

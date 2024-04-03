@@ -6,7 +6,7 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 12:04:08 by haouky            #+#    #+#             */
-/*   Updated: 2024/04/01 13:20:51 by haouky           ###   ########.fr       */
+/*   Updated: 2024/04/03 10:34:12 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_stack
 }					t_stack;
 
 /*file---helper func-------*/
+
 void				fr_lst(t_stack **stack_a, t_stack **stack_b, int nf);
 char				*ft_substr(char const *s, unsigned int st, size_t l);
 size_t				ft_strlen(const char *str);
@@ -82,5 +83,7 @@ void				make_min_top(t_stack **a);
 t_stack				*min_nd(t_stack *nd);
 t_stack				*max_nd(t_stack *nd);
 void				cheapset_move(t_stack *node);
+/*bonus------checkr*/
+int valid_move(t_stack **stack_a, t_stack **stack_b, char *line);
 
 #endif
